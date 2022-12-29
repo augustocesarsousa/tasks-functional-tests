@@ -17,7 +17,6 @@ public class TasksTest {
         // WebDriver driver = new ChromeDriver();
 
         String serverAddress = System.getenv("SERVER_ADDRESS");
-        System.out.println(serverAddress);
         DesiredCapabilities cap = DesiredCapabilities.chrome();
         WebDriver driver = new RemoteWebDriver(new URL("http://"+serverAddress+":4444/wd/hub"), cap);
         driver.navigate().to("http://"+serverAddress+":8001/tasks");
